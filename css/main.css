@@ -79,6 +79,7 @@ main {
   background-color: #fff;
   color: var(--color-black);
 }
+
 .section-title .title {
   position: fixed;
   top: 50%;
@@ -87,10 +88,13 @@ main {
   z-index: 1;
   font-family: "Montserrat-Bold";
 
-  font-size: 20rem;
   /* font-weight: 900; */
 }
+.section-title .title p {
+  font-size: 14rem;
+}
 .section-title .title strong {
+  font-size: 20rem;
 }
 
 .transition-overlay-title {
@@ -136,9 +140,10 @@ main {
   color: #000;
 }
 
-.section-slogan .image-grid h1 {
-  font-weight: 400;
-  font-size: 4rem;
+.section-slogan .image-grid h2 {
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: calc(3.2rem * var(--font-lineheight));
   color: #fff;
 }
 
