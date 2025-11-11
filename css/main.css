@@ -1,16 +1,15 @@
 @charset "utf-8";
-
-@import url(reset.css);
+@import url("reset.css");
+@import url("../font/Pretendard/pretendard.css");
 
 @font-face {
   font-family: "Montserrat-Bold";
   font-weight: 700;
-  src: url(../font/Montserrat-Bold.woff2);
+  src: url("../font/Monsterrat/Montserrat-Bold.woff2");
 }
 
 :root {
   --font-lineheight: 1.4;
-
   --color-black: #222;
 }
 html {
@@ -20,6 +19,7 @@ html {
 body {
   max-width: 192rem;
   min-width: 128rem;
+  font-family: "Pretendard";
 }
 
 .header {
@@ -42,6 +42,7 @@ body {
 
 .header .inner .logo a {
   display: block;
+  font-family: "Montserrat-Bold";
   font-size: 2.6rem;
   font-weight: 700;
   line-height: calc(2.6rem * var(--font-lineheight));
@@ -57,7 +58,10 @@ body {
 }
 .header .inner .nav .gnb li a {
   display: block;
+  font-family: "Pretendard";
   font-size: 2rem;
+  font-weight: 400;
+  line-height: calc(2rem * var(--font-lineheight));
 }
 
 main {
@@ -310,6 +314,7 @@ main {
 
 .section-introduce .inner .left strong,
 .section-introduce .inner .right strong {
+  font-family: "Pretendard";
   font-size: 1.6rem;
   font-weight: 700;
   line-height: calc(2rem * var(--font-lineheight));
@@ -317,6 +322,7 @@ main {
 }
 .section-introduce .inner .left p,
 .section-introduce .inner .right p {
+  font-family: "Pretendard";
   font-size: 1.6rem;
   font-weight: 400;
   line-height: calc(2rem * var(--font-lineheight));
@@ -380,11 +386,15 @@ main {
   gap: 0.5rem;
 }
 .section-project .inner .content .textbox .title strong {
+  font-family: "Pretendard";
+
   font-size: 3.2rem;
   font-weight: 700;
   line-height: calc(3.2rem * var(--font-lineheight));
 }
 .section-project .inner .content .textbox .title p {
+  font-family: "Pretendard";
+
   font-size: 1.6rem;
   font-weight: 400;
   line-height: calc(1.6rem * var(--font-lineheight));
@@ -398,15 +408,19 @@ main {
 .section-project .inner .content .textbox .list .item {
   display: flex;
   gap: 1rem;
-
+  font-family: "Pretendard";
   font-size: 2rem;
   line-height: calc(2rem * var(--font-lineheight));
 }
 .section-project .inner .content .textbox .list .item span {
-  width: 8rem;
+  font-family: "Pretendard";
+  font-size: 2rem;
   font-weight: 500;
+  width: 8rem;
 }
 .section-project .inner .content .textbox .list .item p {
+  font-family: "Pretendard";
+  font-size: 2rem;
   font-weight: 400;
 }
 .section-project .inner .content .textbox .hashtag {
@@ -414,6 +428,8 @@ main {
   gap: 2rem;
 }
 .section-project .inner .content .textbox .hashtag p {
+  font-family: "Pretendard";
+
   font-size: 1.6rem;
   font-weight: 500;
   line-height: calc(1.6rem * var(--font-lineheight));
@@ -567,7 +583,7 @@ main {
   max-width: 26.5vw;
 }
 
-.section-fin {
+.section-contact {
   width: 100%;
   height: 100vh;
   position: relative;
@@ -578,8 +594,151 @@ main {
   align-items: center;
 }
 
-.section-fin h2 {
-  font-size: 20rem;
-  font-weight: 900;
-  line-height: 20rem;
+.section-contact .top {
+  display: flex;
+  align-items: center;
+}
+
+.section-contact .top .qrcode {
+  width: 10rem;
+  height: 10rem;
+}
+.section-contact .top .qrcode img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.section-contact .top .textbox {
+  display: flex;
+  flex-direction: column;
+}
+.section-contact .top .textbox strong {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.section-contact .top .textbox p {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.section-contact .btns {
+  display: flex;
+}
+
+.social-icons {
+  display: flex;
+}
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+.social-icon:hover {
+  color: #fff;
+}
+.social-icon:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -150%);
+}
+.social-icon:active {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) inset;
+}
+.social-icon--linkedin {
+  background: #006599;
+  color: #fff;
+}
+.social-icon--linkedin .tooltip {
+  background: #006599;
+  color: currentColor;
+}
+.social-icon--linkedin .tooltip:after {
+  border-top-color: #006599;
+}
+.social-icon--phone {
+  background: #2b97f1;
+  color: #fff;
+}
+.social-icon--phone .tooltip {
+  background: #2b97f1;
+  color: currentColor;
+}
+.social-icon--phone .tooltip:after {
+  border-top-color: #2b97f1;
+}
+.social-icon--github .fa-github,
+.social-icon--phone .fa-phone,
+.social-icon--email .fa-email {
+  width: 4.8rem;
+}
+.social-icon--git .fa-git img,
+.social-icon--phone .fa-phone img,
+.social-icon--email .fa-email img {
+  width: 100%;
+  object-fit: cover;
+}
+.social-icon--github {
+  background: #000;
+  color: #fff;
+}
+.social-icon--github .tooltip {
+  background: #000;
+  color: currentColor;
+}
+.social-icon--github .tooltip:after {
+  border-top-color: #000;
+}
+
+.social-icon--email {
+  background: #ef5a92;
+  color: #fff;
+}
+.social-icon--email .tooltip {
+  background: #ef5a92;
+  color: currentColor;
+}
+.social-icon--email .tooltip:after {
+  border-top-color: #ef5a92;
+}
+
+.social-icon i {
+  position: relative;
+  top: 1px;
+}
+.tooltip {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 1.8rem 2rem;
+  border-radius: 40px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  text-transform: uppercase;
+  transform: translate(-50%, -100%);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+.tooltip:after {
+  display: block;
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  content: "";
+  border: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: rgba(0, 0, 0, 0);
+  transform: translate(-50%, 100%);
 }

@@ -17,7 +17,6 @@
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 
-    <script src="js/common.js" type="module"></script>
     <script src="js/main.js" type="module"></script>
     <!-- <script src="js/common.js"></script> -->
   </head>
@@ -32,7 +31,9 @@
         <nav class="nav">
           <ul class="gnb">
             <li><a href="#title" class="gnb-item">Intro</a></li>
-            <li><a href="#about" class="gnb-item">About</a></li>
+            <li class="gnb-depth1">
+              <a href="#about" class="gnb-item">About</a>
+            </li>
             <li><a href="#project" class="gnb-item">Project</a></li>
             <li><a href="#contact" class="gnb-item">Contact</a></li>
           </ul>
@@ -640,8 +641,42 @@
 
           <div class="text-drop__line">Content</div>
         </section>
-        <section id="contact" class="section-fin">
-          <h2>감사합니다</h2>
+
+        <section id="contact" class="section-contact">
+          <div class="inner">
+            <div class="top">
+              <div class="qrcode">
+                <img src="img/임시사진.png" alt="QR코드" />
+              </div>
+              <!-- qrcode -->
+              <div class="textbox">
+                <strong>CONTACT ME</strong>
+                <p>010-8482-0094</p>
+                <p>leenh0726@naver.com</p>
+              </div>
+              <!-- textbox -->
+            </div>
+            <!-- top -->
+
+            <div class="btns">
+              <a class="social-icon social-icon--github">
+                <i class="fa fa-github"
+                  ><img src="img/icon_github_negative.svg" alt=""
+                /></i>
+                <div class="tooltip">Github</div>
+              </a>
+              <a class="social-icon social-icon--phone">
+                <i class="fa fa-phone"><img src="img/phone.png" alt="" /></i>
+                <div class="tooltip">Tel</div>
+              </a>
+
+              <a class="social-icon social-icon--email">
+                <i class="fa fa-email"><img src="img/email.png" alt="" /></i>
+                <div class="tooltip">mail</div>
+              </a>
+            </div>
+            <!-- btns -->
+          </div>
         </section>
         <!-- section-fin -->
       </div>

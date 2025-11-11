@@ -21,7 +21,7 @@ window.onload = () => {
     ".section-introduce .inner"
   );
 
-  // a태그 클릭 시 부드럽게 이동
+  /*   // a태그 클릭 시 부드럽게 이동
   document.querySelectorAll("a.gnb-item").forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
@@ -33,7 +33,7 @@ window.onload = () => {
         ease: "power2.inOut",
       });
     });
-  });
+  }); */
 
   // main
 
@@ -190,6 +190,15 @@ window.onload = () => {
     normalizeScroll: true,
     onUpdate: (self) => skewSetter(clamp(self.getVelocity() / -50)),
     onStop: () => skewSetter(0),
+  });
+
+  //about 메뉴 클릭 시 콘텐츠 이동
+  let gnbDepth1 = document.querySelector(".gnb-depth1");
+
+  gnbDepth1.addEventListener("click", () => {
+    let scrollBar = window.scrollY;
+    console.log(scrollBar);
+    window.scrollTo({ top: 2800, behavior: "smooth" });
   });
 };
 
