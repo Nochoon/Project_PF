@@ -2,6 +2,12 @@
 
 @import url(reset.css);
 
+@font-face {
+  font-family: "Montserrat-Bold";
+  font-weight: 700;
+  src: url(../font/Montserrat-Bold.woff2);
+}
+
 :root {
   --font-lineheight: 1.4;
 
@@ -14,6 +20,44 @@ html {
 body {
   max-width: 192rem;
   min-width: 128rem;
+}
+
+.header {
+  width: 100%;
+  height: 8rem;
+  position: fixed;
+  z-index: 9999;
+}
+.header .inner {
+  width: 160rem;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .inner .logo {
+}
+
+.header .inner .logo a {
+  display: block;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: calc(2.6rem * var(--font-lineheight));
+}
+
+.header .inner .nav {
+}
+.header .inner .nav .gnb {
+  display: flex;
+  gap: 5rem;
+}
+.header .inner .nav .gnb li {
+}
+.header .inner .nav .gnb li a {
+  display: block;
+  font-size: 2rem;
 }
 
 main {
@@ -37,8 +81,10 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+  font-family: "Montserrat-Bold";
+
   font-size: 20rem;
-  font-weight: 900;
+  /* font-weight: 900; */
 }
 .section-title .title strong {
 }

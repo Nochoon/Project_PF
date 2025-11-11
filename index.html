@@ -11,18 +11,43 @@
     <script src="lib/gsap/gsap.min.js"></script>
     <script src="lib/gsap/ScrollTrigger.min.js"></script>
     <script src="lib/gsap/ScrollSmoother.min.js"></script>
+    <script src="lib/gsap/ScrollToPlugin.min.js"></script>
     <script src="lib/gsap/CustomEase.min.js"></script>
     <script src="lib/gsap/SplitText.min.js"></script>
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 
+    <script src="js/common.js" type="module"></script>
     <script src="js/main.js" type="module"></script>
+    <!-- <script src="js/common.js"></script> -->
   </head>
   <body>
+    <header class="header">
+      <div class="inner">
+        <h1 class="logo">
+          <!-- <a href="#">&lt;NOHOON /&gt;</a> -->
+          <a href="#">LOGO</a>
+        </h1>
+
+        <nav class="nav">
+          <ul class="gnb">
+            <li><a href="#title" class="gnb-item">Intro</a></li>
+            <li><a href="#about" class="gnb-item">About</a></li>
+            <li><a href="#project" class="gnb-item">Project</a></li>
+            <li><a href="#contact" class="gnb-item">Contact</a></li>
+          </ul>
+          <!-- gnb -->
+        </nav>
+        <!-- nav -->
+      </div>
+      <!-- inner -->
+    </header>
+    <!-- header -->
+
     <main>
       <div class="main-wrap">
         <div class="trigger-01">
-          <section class="section-title">
+          <section id="title" class="section-title">
             <div class="title">Portfolio</div>
             <!-- title -->
           </section>
@@ -31,7 +56,7 @@
           <div class="transition-overlay-title"></div>
           <!-- transition-overlay -->
 
-          <section class="section-slogan">
+          <section id="slogan" class="section-slogan">
             <div class="image-grid">
               <div class="title">
                 <h1>슬로건</h1>
@@ -75,7 +100,7 @@
           <div class="transition-overlay-slogan"></div>
           <!-- transition-overlay -->
 
-          <section class="section-introduce">
+          <section id="about" class="section-introduce">
             <div class="inner">
               <div class="list">
                 <div class="left">
@@ -212,7 +237,7 @@
                     </div>
 
                     <div class="icon">
-                      <img src="img/icon_c#.svg" alt="c#로고" />
+                      <img src="img/" alt="c#로고" />
                     </div>
 
                     <div class="icon">
@@ -235,7 +260,7 @@
         </div>
         <!-- trigger-01 -->
 
-        <section class="section-project">
+        <section id="project" class="section-project">
           <div class="inner">
             <div class="content">
               <div class="imagebox">
@@ -615,7 +640,7 @@
 
           <div class="text-drop__line">Content</div>
         </section>
-        <section class="section-fin">
+        <section id="contact" class="section-fin">
           <h2>감사합니다</h2>
         </section>
         <!-- section-fin -->

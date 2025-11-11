@@ -1,4 +1,6 @@
 window.onload = () => {
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
+
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
   const section_title = document.querySelector(".section-title");
   const title = document.querySelector(".section-title .title");
@@ -18,6 +20,22 @@ window.onload = () => {
   const section_introduce_inner = document.querySelector(
     ".section-introduce .inner"
   );
+
+  // a태그 클릭 시 부드럽게 이동
+  document.querySelectorAll("a.gnb-item").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const target = link.getAttribute("href"); // 예: "#section2"
+
+      gsap.to(window, {
+        duration: 1,
+        scrollTo: target, // ScrollToPlugin이 이걸 해석해서 부드럽게 이동
+        ease: "power2.inOut",
+      });
+    });
+  });
+
+  // main
 
   const tl_title = gsap.timeline({
     scrollTrigger: {
