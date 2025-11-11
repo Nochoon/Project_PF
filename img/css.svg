@@ -1,0 +1,31 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_302_2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="9" y="12" width="42" height="47">
+<path d="M9.95996 12.8408H50.0332V58.2797H9.95996V12.8408Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_302_2)">
+<path d="M29.9758 58.2771L13.6232 53.7355L9.97925 12.8424L50.0213 12.8418L46.3749 53.7287L29.9766 58.2765L29.9758 58.2771Z" fill="#0277BD"/>
+</g>
+<path d="M43.2521 51.1257L46.3694 16.186L30.001 16.1855V54.7999L43.2521 51.1252V51.1257Z" fill="#039BE5"/>
+<path d="M18.3335 31.3525L18.7827 36.3668H30.0008V31.3525H18.3335Z" fill="#EBEBEB"/>
+<path d="M17.4307 21.2002L17.8863 26.2161H30.001V21.2002H17.4307Z" fill="#EBEBEB"/>
+<path d="M30.0008 44.3777L29.9789 44.3839L24.396 42.8748L24.0389 38.875H19.0066L19.7089 46.7505L29.9774 49.6023L30.0008 49.5961V44.3777Z" fill="#EBEBEB"/>
+<mask id="mask1_302_2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="19" y="1" width="7" height="9">
+<path d="M19.4001 1.72949H25.4801V9.36059H19.4001V1.72949Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_302_2)">
+<path d="M19.4033 1.72949H25.4749V4.2698H21.9422V6.81012H25.4749V9.35027H19.4033V1.72949Z" fill="black"/>
+</g>
+<mask id="mask2_302_2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="26" y="1" width="7" height="9">
+<path d="M26.6794 1.72949H32.7994V9.48059H26.6794V1.72949Z" fill="white"/>
+</mask>
+<g mask="url(#mask2_302_2)">
+<path d="M26.689 1.72949H32.7605V3.93855H29.2288V4.38027H32.7605V9.46074H26.689V7.14152H30.2224V6.69949H26.689V1.72949Z" fill="black"/>
+</g>
+<mask id="mask3_302_2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="33" y="1" width="8" height="9">
+<path d="M33.96 1.72949H40.08V9.48059H33.96V1.72949Z" fill="white"/>
+</mask>
+<g mask="url(#mask3_302_2)">
+<path d="M33.9753 1.72949H40.0469V3.93855H36.5135V4.38027H40.0469V9.46074H33.9753V7.14152H37.5071V6.69949H33.9753V1.72949Z" fill="black"/>
+</g>
+<path d="M41.6368 31.3529L42.5408 21.2002H29.9836V26.2161H37.0471L36.5919 31.3529H29.9836V36.3671H36.1571L35.5747 42.8718L29.9836 44.3824V49.5993L40.2602 46.7505L40.3355 45.9025L41.5143 32.6986L41.6368 31.3529Z" fill="white"/>
+</svg>

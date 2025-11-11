@@ -189,58 +189,11 @@ main {
 }
 
 .pos-7 {
-  grid-area: 43/1/51/10;
+  grid-area: 40/26/51/32;
 }
 
 .pos-8 {
   grid-area: 38/14/51/19;
-}
-
-.pos-9 {
-  grid-area: 40/26/51/32;
-}
-
-.pos-10 {
-  grid-area: 37/39/48/47;
-}
-.pos-1 {
-  grid-area: 10/1/36/8;
-}
-
-.pos-2 {
-  grid-area: 1/21/17/30;
-}
-
-.pos-3 {
-  grid-area: 1/36/14/42;
-}
-
-.pos-4 {
-  grid-area: 10/10/32/17;
-}
-
-.pos-5 {
-  grid-area: 20/35/35/45;
-}
-
-.pos-6 {
-  grid-area: 20/46/28/51;
-}
-
-.pos-7 {
-  grid-area: 43/1/51/10;
-}
-
-.pos-8 {
-  grid-area: 38/14/51/19;
-}
-
-.pos-9 {
-  grid-area: 40/26/51/32;
-}
-
-.pos-10 {
-  grid-area: 37/39/48/47;
 }
 
 .transition-overlay-slogan {
@@ -599,14 +552,52 @@ main {
   align-items: center;
 }
 
+.sction-contact .scrolltext {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.sction-contact .scrolltext .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+}
+.sction-contact .scrolltext .row .text {
+  display: inline-flex;
+  white-space: nowrap;
+}
+
+.sction-contact .scrolltext .row .text h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 10rem;
+  weight: 900;
+  margin: 0;
+  padding: 0 10px;
+  text-transform: uppercase;
+}
+.section-contact .contact-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
 .section-contact .top {
   display: flex;
   align-items: center;
+  gap: 2rem;
 }
 
 .section-contact .top .qrcode {
-  width: 10rem;
-  height: 10rem;
+  width: 12rem;
+  height: 12rem;
 }
 .section-contact .top .qrcode img {
   width: 100%;
@@ -616,18 +607,21 @@ main {
 .section-contact .top .textbox {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
 }
 .section-contact .top .textbox strong {
-  font-size: 1.6rem;
+  font-size: 3.2rem;
   font-weight: 700;
 }
 .section-contact .top .textbox p {
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: 400;
 }
 
 .section-contact .btns {
+  /* margin-top: 10rem; */
   display: flex;
+  gap: 2rem;
 }
 
 .social-icons {

@@ -171,25 +171,25 @@ window.onload = () => {
     };
 
     render();
-  });
+    let skewSetter = gsap.quickTo(".section-other img", "skewY"), // fast
+      clamp = gsap.utils.clamp(-20, 20); // don't let the skew go beyond 20 degrees.
 
-  let skewSetter = gsap.quickTo(".section-other img", "skewY"), // fast
-    clamp = gsap.utils.clamp(-20, 20); // don't let the skew go beyond 20 degrees.
-
-  ScrollTrigger.create({
-    trigger: ".section-other .inner",
-    scrollTrigger: {
-      trigger: ".section-other .inner .content",
-      start: "top top",
-      end: "bottom bottom",
-      scrub: 1,
-    },
-    smooth: 2,
-    speed: 3,
-    effects: true,
-    normalizeScroll: true,
-    onUpdate: (self) => skewSetter(clamp(self.getVelocity() / -50)),
-    onStop: () => skewSetter(0),
+    ScrollTrigger.create({
+      trigger: ".section-other .inner",
+      scrollTrigger: {
+        trigger: ".section-other .inner .content",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 1,
+      },
+      smooth: 2,
+      speed: 3,
+      effects: true,
+      normalizeScroll: true,
+      onUpdate: (self) => skewSetter(clamp(self.getVelocity() / -50)),
+      onStop: () => skewSetter(0),
+    });
+    //
   });
 
   //about 메뉴 클릭 시 콘텐츠 이동
@@ -200,36 +200,36 @@ window.onload = () => {
     console.log(scrollBar);
     window.scrollTo({ top: 2800, behavior: "smooth" });
   });
-};
 
-// Lenis Scroll
+  const lenis = new Lenis({
+    smooth: true,
+    multiplier: 1,
+    easing: (t) => t * (2 - t),
+    smoothTouch: true,
+    lerp: 0.05,
+    duration: 1.2,
+  });
 
-const lenis = new Lenis({
-  smooth: true,
-  multiplier: 1,
-  easing: (t) => t * (2 - t),
-  smoothTouch: true,
-  lerp: 0.05,
-  duration: 1.2,
-});
+  // Lenis Scroll
 
-function raf(time) {
-  lenis.raf(time);
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
   requestAnimationFrame(raf);
-}
 
-requestAnimationFrame(raf);
+  // GSAP Setup
 
-// GSAP Setup
+  gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.normalizeScroll(true);
 
-gsap.registerPlugin(ScrollTrigger);
-ScrollTrigger.normalizeScroll(true);
-
-// ANIMATION
+  // ANIMATION
+};
 
 window.addEventListener("DOMContentLoaded", () => {
   const lines = [...document.querySelectorAll(".text-drop__line")];
-  const images = [...document.querySelectorAll(".text-drop__img-box")];
+  const textdrop_images = [...document.querySelectorAll(".text-drop__img-box")];
   const prlxElements = [...document.querySelectorAll(".has-prlx")];
 
   lines.forEach((line, index) => {
@@ -253,12 +253,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // Images Reveal
 
-    if (images[index]) {
-      const targetOpacity = images[index].getAttribute("data-opacity") || 1;
+    if (textdrop_images[index]) {
+      const targetOpacity =
+        textdrop_images[index].getAttribute("data-opacity") || 1;
 
       let startOffset = window.innerWidth < 1024 ? "-=200" : "-=500";
 
-      gsap.to(images[index], {
+      gsap.to(textdrop_images[index], {
         opacity: targetOpacity,
         duration: 0.5,
         ease: "power2.out",
