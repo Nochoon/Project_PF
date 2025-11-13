@@ -43,7 +43,7 @@ window.onload = () => {
       start: "top top",
       end: "bottom bottom",
       scrub: 1, // Increased for smoother scrubbing
-      markers: true,
+      markers: false,
     },
   });
 
