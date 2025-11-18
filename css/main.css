@@ -143,8 +143,9 @@ main {
 .section-slogan .image-grid h2 {
   font-weight: 700;
   font-size: 4rem;
-  line-height: calc(3.2rem * var(--font-lineheight));
+  line-height: calc(3.2rem * 2);
   color: #fff;
+  text-align: center;
 }
 
 .section-slogan .image-grid__item {
@@ -235,7 +236,7 @@ main {
 }
 
 .section-introduce .inner .left {
-  width: 30%;
+  width: 20%;
   display: flex;
   flex-direction: column;
   gap: 3rem;
