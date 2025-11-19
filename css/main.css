@@ -386,7 +386,6 @@ main {
 }
 .section-project .inner .content .textbox .hashtag p {
   font-family: "Pretendard";
-
   font-size: 1.6rem;
   font-weight: 400;
   line-height: calc(1.6rem * var(--font-lineheight));
@@ -405,6 +404,10 @@ main {
   text-align: center;
   cursor: pointer;
   border: 1px solid #4b4b4b;
+  transition: all 0.3s ease;
+}
+.section-project .inner .content .textbox .buttonbox .btn:hover {
+  transform: translateY(-5px);
 }
 .section-project .inner .content .textbox .buttonbox .btn.btn-website {
   display: flex;

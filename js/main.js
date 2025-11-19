@@ -1,7 +1,8 @@
 window.onload = () => {
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+  const header = document.querySelector(".header");
+
   const section_title = document.querySelector(".section-title");
   const title = document.querySelector(".section-title .title");
   const transitionOverlay_title = document.querySelector(
@@ -20,6 +21,8 @@ window.onload = () => {
   const section_introduce_inner = document.querySelector(
     ".section-introduce .inner"
   );
+
+  const section_textdrop = document.querySelector(".text-drop");
 
   /*   // a태그 클릭 시 부드럽게 이동
   document.querySelectorAll("a.gnb-item").forEach((link) => {
@@ -77,6 +80,14 @@ window.onload = () => {
       duration: 1,
       ease: "power2.inOut",
     })
+    // .to(
+    //   header,
+    //   {
+    //     color: "#ffffff",
+    //     ease: "power2.inOut",
+    //   },
+    //   "<"
+    // )
 
     .to(
       transitionOverlay_slogan,
@@ -97,6 +108,14 @@ window.onload = () => {
       },
       "-=0.5"
     )
+    // .to(
+    //   header,
+    //   {
+    //     color: "#222222",
+    //     ease: "power2.inOut",
+    //   },
+    //   "<"
+    // )
     .to(
       section_introduce_inner,
       {
@@ -117,11 +136,58 @@ window.onload = () => {
       "-=0.5"
     );
 
-  const images = [...document.querySelectorAll(".section-slogan img")];
+  // const tl_textdrop = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: ".text-drop",
+  //     start: "top bottom",
+  //     end: "bottom top",
+  //     scrub: 1, // Increased for smoother scrubbing
+  //     markers: true,
 
+  //     onEnter: () => {
+  //       console.log("스크롤트리거 시작 (start 지점 도착)");
+  //       console.log(`${window.scrollY}`);
+
+  //       header.style.color = "#ffffff";
+  //     },
+
+  //     onLeave: () => {
+  //       console.log("스크롤트리거 끝 (end 지점 통과)");
+  //       header.style.color = "#222222";
+  //       console.log(`${window.scrollY}`);
+  //     },
+
+  //     onEnterBack: () => {
+  //       console.log("스크롤트리거 역방향 시작으로 돌아옴");
+  //     },
+
+  //     onLeaveBack: () => {
+  //       console.log("스크롤트리거 역방향 끝으로 돌아옴");
+  //     },
+  //   },
+  // });
+
+  // const intervalId = setInterval(myFunc, 1000);
+
+  // function myFunc() {
+  //   console.log(`${window.scrollY}`);
+  // }
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY >= 800 && window.scrollY <= 2200) {
+      console.log("Test");
+      header.style.color = "#ffffff";
+    } else if (window.scrollY >= 8700 && window.scrollY <= 9697) {
+      console.log("Test");
+      header.style.color = "#ffffff";
+    } else {
+      header.style.color = "#222222";
+    }
+  });
+
+  const images = [...document.querySelectorAll(".section-slogan img")];
   const lerp = (a, b, n) => (1 - n) * a + n * b;
   const map = (x, a, b, c, d) => ((x - a) * (d - c)) / (b - a) + c;
-
   const getMousePosition = (e) => ({
     x: e.clientX,
     y: e.clientY,
@@ -225,9 +291,7 @@ window.onload = () => {
   ScrollTrigger.normalizeScroll(true);
 
   // ANIMATION
-};
 
-window.addEventListener("DOMContentLoaded", () => {
   const lines = [...document.querySelectorAll(".text-drop__line")];
   const textdrop_images = [...document.querySelectorAll(".text-drop__img-box")];
   const prlxElements = [...document.querySelectorAll(".has-prlx")];
@@ -290,5 +354,5 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  window.addEventListener("resize", () => ScrollTrigger.refresh());
-});
+  // window.addEventListener("resize", () => ScrollTrigger.refresh());
+};
